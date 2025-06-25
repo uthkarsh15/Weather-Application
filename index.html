@@ -1,18 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="./styles.css">
-
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Glassy Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>This is my Whether Application</h1>
-    <div id="mainParent">
+  <div id="rain"></div>
 
-    </div>
-    <script src="./script.js"></script>
+  <div class="top-bar glass">
+    <input type="text" id="search" placeholder="Enter city name" />
+    <button id="searchBtn">Search</button>
+    <button id="toggleTheme">🌙 Toggle Theme</button>
+  </div>
+
+  <div class="container">
+    <aside class="left-panel glass">
+      <div class="weather-main">
+        <img id="weather-icon" alt="Weather Icon" />
+        <div class="temp" id="temperature"></div>
+        <div class="desc" id="description"></div>
+        <div class="date" id="datetime"></div>
+        <div class="location" id="location"></div>
+      </div>
+    </aside>
+
+    <main class="right-panel glass">
+      <h2>Today's Highlights</h2>
+      <div class="highlights">
+        <div class="card glass"><h3>UV Index</h3><p id="uv">--</p></div>
+        <div class="card glass"><h3>Wind Status</h3><p id="wind">--</p></div>
+        <div class="card glass"><h3>Sunrise & Sunset</h3><p id="sunrise">Sunrise: --</p><p id="sunset">Sunset: --</p></div>
+        <div class="card glass"><h3>Humidity</h3><p id="humidity">--</p></div>
+        <div class="card glass"><h3>Visibility</h3><p id="visibility">--</p></div>
+        <div class="card glass"><h3>Air Quality (PM2.5)</h3><p id="air-quality">--</p></div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
